@@ -1,21 +1,13 @@
-import { useDispatch, useSelector } from "react-redux";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
 
 function App() {
-  const { teste } = useSelector((rootReducer) => rootReducer.teste);
-  console.log(teste);
-
-  const dispatch = useDispatch();
-
-  const handleClick = () => {
-    dispatch({
-      type: "TESTE",
-    });
-  };
-
   return (
-    <div>
-      <button onClick={handleClick}>Click</button>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
