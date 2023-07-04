@@ -1,12 +1,7 @@
+import { Link } from "react-scroll";
 import { StyledHeader } from "./Header.styled";
 
 export const Header = () => {
-  const handleClickScroll = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
   return (
     <StyledHeader>
       <section>
@@ -14,13 +9,15 @@ export const Header = () => {
           <img src="images/nasa-logo.png" alt="" />
         </div>
         <nav>
-          <a href="/#">Home | </a>
-          <a href="/#" onClick={() => handleClickScroll("apod")}>
+          <Link to="picOfTheDay" smooth={true} duration={1000}>
+            Home |
+          </Link>
+          <Link to="picOfTheDay" smooth={true} duration={1000}>
             APOD |
-          </a>
-          <a href="/#" onClick={() => handleClickScroll("marsRover")}>
+          </Link>
+          <Link to="picOfTheDay" smooth={true} duration={1000}>
             Mars Rover |
-          </a>
+          </Link>
         </nav>
       </section>
     </StyledHeader>

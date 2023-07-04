@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 export const StyledContainer = styled.section`
   position: relative;
   width: 100%;
-  height: 150vh;
+  height: 120vh;
   background-image: url("./images/space.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -30,7 +30,7 @@ export const StyledFadeEffectTop = styled.div`
 
 export const StyledText = styled.div`
   width: 60%;
-  margin: 100px auto;
+  margin: 0 auto 40px auto;
   background-color: rgb(250, 250, 250, 0.8);
   max-width: 700px;
   min-width: 300px;

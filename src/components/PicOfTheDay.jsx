@@ -32,8 +32,8 @@ export const PicOfTheDay = () => {
   }, []);
 
   return (
-    <StyledContainer id="apod">
-      <StyledFadeEffectTop></StyledFadeEffectTop>
+    <StyledContainer>
+      <StyledFadeEffectTop id={"picOfTheDay"}></StyledFadeEffectTop>
       <StyledText>
         <h1>APOD</h1>
         <span>

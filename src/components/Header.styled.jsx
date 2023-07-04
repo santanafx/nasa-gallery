@@ -18,6 +18,7 @@ export const StyledHeader = styled.header`
     padding: 0 20px;
     font-size: 1.3rem;
     &:hover {
+      cursor: pointer;
       opacity: 0.5;
     }
   }
