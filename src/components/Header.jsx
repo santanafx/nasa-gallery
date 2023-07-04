@@ -9,13 +9,13 @@ export const Header = () => {
           <img src="images/nasa-logo.png" alt="" />
         </div>
         <nav>
-          <Link to="picOfTheDay" smooth={true} duration={1000}>
+          <Link to="" smooth={true} duration={1000}>
             Home |
           </Link>
           <Link to="picOfTheDay" smooth={true} duration={1000}>
             APOD |
           </Link>
-          <Link to="picOfTheDay" smooth={true} duration={1000}>
+          <Link to="" smooth={true} duration={1000}>
             Mars Rover |
           </Link>
         </nav>

@@ -61,6 +61,11 @@ export const StyledSection = styled.div`
     color: white;
     text-align: center;
   }
+  @media (max-width: 1000px) {
+    h3 {
+      font-size: 0.7rem;
+    }
+  }
 `;
 
 export const StyledFadeEffectBot = styled.div`
