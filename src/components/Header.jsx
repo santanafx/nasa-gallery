@@ -1,6 +1,12 @@
 import { StyledHeader } from "./Header.styled";
 
 export const Header = () => {
+  const handleClickScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <StyledHeader>
       <section>
@@ -9,8 +15,12 @@ export const Header = () => {
         </div>
         <nav>
           <a href="/#">Home | </a>
-          <a href="/#">APOD | </a>
-          <a href="/#">Mars Rover | </a>
+          <a href="/#" onClick={() => handleClickScroll("apod")}>
+            APOD |
+          </a>
+          <a href="/#" onClick={() => handleClickScroll("marsRover")}>
+            Mars Rover |
+          </a>
         </nav>
       </section>
     </StyledHeader>

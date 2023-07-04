@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const YoutubeContainer = styled.div`
   position: relative;
+  height: 100vh;
 
   iframe {
     position: absolute;

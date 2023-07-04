@@ -5,7 +5,7 @@ export const useApiRequests = () => {
 
   const getRequest = async () => {
     const response = await axios.get(
-      `https://api.nasa.gov/planetary/apod?count=5&api_key=${API_KEY}`
+      `https://api.nasa.gov/planetary/apod?count=20&api_key=${API_KEY}`
     );
     return response.data;
   };
