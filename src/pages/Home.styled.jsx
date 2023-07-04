@@ -45,4 +45,5 @@ export const TextIntro = styled.div`
 
 export const Title = styled.h1`
   margin-bottom: 20px;
+  color: ${(props) => props.theme.colors.primaryColor};
 `;
