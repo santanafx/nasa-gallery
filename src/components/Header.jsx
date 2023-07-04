@@ -1,19 +1,18 @@
-import React from "react";
-import { Container, NavOpts, SectionContainer } from "./Header.styled";
+import { StyledHeader } from "./Header.styled";
 
 export const Header = () => {
   return (
-    <Container>
-      <SectionContainer>
+    <StyledHeader>
+      <section>
         <div>
           <img src="images/nasa-logo.png" alt="" />
         </div>
         <nav>
-          <NavOpts href="/#">Home</NavOpts>
-          <NavOpts href="/#">APOD</NavOpts>
-          <NavOpts href="/#">Mars Rover</NavOpts>
+          <a href="/#">Home | </a>
+          <a href="/#">APOD | </a>
+          <a href="/#">Mars Rover | </a>
         </nav>
-      </SectionContainer>
-    </Container>
+      </section>
+    </StyledHeader>
   );
 };
