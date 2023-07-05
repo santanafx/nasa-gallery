@@ -7,6 +7,7 @@ export const Modal = ({
   modal,
   setModal,
   explanation,
+  img_src,
 }) => {
   return (
     <>
@@ -21,6 +22,10 @@ export const Modal = ({
                 <button onClick={() => setModal(!modal)}>Fechar</button>
               </>
             ) : (
+              ""
+            )}
+
+            {media_type === "video" ? (
               <>
                 <iframe
                   width="100%"
@@ -35,6 +40,19 @@ export const Modal = ({
                 <p>{explanation}</p>
                 <button onClick={() => setModal(!modal)}>Fechar</button>
               </>
+            ) : (
+              ""
+            )}
+
+            {img_src !== undefined ? (
+              <>
+                <img src={img_src} alt="" />
+                <h1>{title}</h1>
+                <p>{explanation}</p>
+                <button onClick={() => setModal(!modal)}>Fechar</button>
+              </>
+            ) : (
+              ""
             )}
           </div>
         </StyledBg>

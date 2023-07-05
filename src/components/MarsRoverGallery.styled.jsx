@@ -16,7 +16,7 @@ export const StyledContainer = styled.section`
 export const StyledImgContainer = styled.div`
   width: 400px;
   height: 400px;
-  box-shadow: 0px 4px 20px rgba(255, 128, 0, 0.9);
+  box-shadow: 0px 4px 20px rgba(250, 250, 250, 0.9);
 
   img {
     width: 100%;
@@ -39,28 +39,31 @@ export const StyledImgContainer = styled.div`
 export const StyledLeftArrow = styled.div`
   position: absolute;
   top: 55%;
-  left: 30%;
+  left: 5%;
   color: white;
   z-index: 2000;
   cursor: pointer;
-  @media (max-width: 1400px) {
-    left: 10%;
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
   }
-  @media (max-width: 500px) {
-    left: 5%;
+
+  @media (max-width: 1000px) {
+    left: 0%;
   }
 `;
 export const StyledRightArrow = styled.div`
   position: absolute;
   top: 55%;
-  right: 30%;
+  right: 5%;
   color: white;
   z-index: 2000;
   cursor: pointer;
-  @media (max-width: 1400px) {
-    right: 10%;
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
   }
-  @media (max-width: 500px) {
-    right: 5%;
+  @media (max-width: 1000px) {
+    right: 0%;
   }
 `;

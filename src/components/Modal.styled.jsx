@@ -27,16 +27,19 @@ export const StyledBg = styled.section`
     width: 100%;
     object-fit: cover;
     height: 70%;
+    user-select: none;
   }
 
   h1 {
     padding: 10px;
+    user-select: none;
   }
 
   p {
     padding: 10px;
     text-align: justify;
     font-size: 0.8rem;
+    user-select: none;
   }
 
   iframe {

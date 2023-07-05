@@ -13,8 +13,14 @@ import {
   StyledFadeEffectTop,
   StyledText,
 } from "./PicOfTheDay.styled";
+import { Modal } from "./Modal";
 
 export const MarsRoverGallery = () => {
+  const [modal, setModal] = React.useState(false);
+  const [title, setTitle] = React.useState("Curiosity");
+  const [explanation, setExplanation] = React.useState(
+    "Front Hazard Avoidance Camera"
+  );
   const { filesMarsRover } = useSelector((rootReducer) => rootReducer.data);
   const [nextImg, setNextImg] = React.useState(0);
 
@@ -41,7 +47,11 @@ export const MarsRoverGallery = () => {
       </StyledText>
       {filesMarsRover !== null ? (
         <StyledImgContainer>
-          <img src={filesMarsRover[nextImg].img_src} alt="" />
+          <img
+            src={filesMarsRover[nextImg].img_src}
+            alt="Imagem de marte"
+            onClick={() => setModal(!modal)}
+          />
           <StyledLeftArrow>
             <AiOutlineArrowLeft
               size={50}
@@ -51,6 +61,8 @@ export const MarsRoverGallery = () => {
                 } else {
                   setNextImg(nextImg - 1);
                 }
+                setTitle(filesMarsRover[nextImg].rover.name);
+                setExplanation(filesMarsRover[nextImg].camera.full_name);
               }}
             />
           </StyledLeftArrow>
@@ -63,12 +75,25 @@ export const MarsRoverGallery = () => {
                 } else {
                   setNextImg(nextImg + 1);
                 }
+                setTitle(filesMarsRover[nextImg].rover.name);
+                setExplanation(filesMarsRover[nextImg].camera.full_name);
               }}
             />
           </StyledRightArrow>
         </StyledImgContainer>
       ) : (
         "Loading..."
+      )}
+      {filesMarsRover !== null ? (
+        <Modal
+          modal={modal}
+          setModal={setModal}
+          img_src={filesMarsRover[nextImg].img_src}
+          title={title}
+          explanation={explanation}
+        />
+      ) : (
+        ""
       )}
       <StyledFadeEffectBot></StyledFadeEffectBot>
     </StyledContainer>
