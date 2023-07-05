@@ -68,6 +68,22 @@ export const StyledSection = styled.div`
   }
 `;
 
+export const StyledButton = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+
+  button {
+    padding: 5px 15px;
+    border-radius: 10px;
+    border: none;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+`;
+
 export const StyledFadeEffectBot = styled.div`
   background: linear-gradient(
     to top,

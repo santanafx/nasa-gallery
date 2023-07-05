@@ -17,18 +17,19 @@
 .swiper-slide img {
   width: 100%;
   object-fit: cover;
-  height: 300px;
+  height: 70%;
+}
+
+.swiper-slide iframe {
+  user-select: none;
+  width: 100%;
+  object-fit: cover;
+  height: 70%;
 }
 
 @media screen and (max-width: 1100px) {
   .swiper-slide {
     width: 200px;
     height: 200px;
-  }
-
-  .swiper-slide img {
-    width: 100%;
-    object-fit: cover;
-    height: 150px;
   }
 }
