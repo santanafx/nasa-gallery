@@ -15,7 +15,7 @@ export const Header = () => {
           <Link to="picOfTheDay" smooth={true} duration={1000}>
             APOD |
           </Link>
-          <Link to="" smooth={true} duration={1000}>
+          <Link to="mars" smooth={true} duration={1000}>
             Mars Rover |
           </Link>
         </nav>

@@ -23,16 +23,16 @@ export const PicOfTheDay = () => {
   const [title, setTitle] = React.useState(null);
   const [media, setMedia] = React.useState(null);
   const [explanation, setExplanation] = React.useState(null);
-  const { files } = useSelector((rootReducer) => rootReducer.data);
-  console.log(files);
+  const { filesApod } = useSelector((rootReducer) => rootReducer.data);
+  // console.log(filesApod);
 
   const dispatch = useDispatch();
-  const { getRequest } = useApiRequests();
+  const { getRequestApod } = useApiRequests();
 
   React.useEffect(() => {
-    getRequest().then((dataFromRequest) => {
+    getRequestApod().then((dataFromRequest) => {
       dispatch({
-        type: "STORE_DATA",
+        type: "STORE_DATA_APOD",
         payload: dataFromRequest,
       });
     });
@@ -75,9 +75,9 @@ export const PicOfTheDay = () => {
           pagination={true}
           className="mySwiper"
         >
-          {files !== null ? (
+          {filesApod !== null ? (
             <>
-              {files.map((element) => (
+              {filesApod.map((element) => (
                 <SwiperSlide key={JSON.stringify(element)}>
                   {element.media_type === "image" ? (
                     <>
@@ -134,7 +134,6 @@ export const PicOfTheDay = () => {
           )}
         </Swiper>
       </StyledSection>
-      <StyledFadeEffectBot></StyledFadeEffectBot>
       <Modal
         modal={modal}
         setModal={setModal}
@@ -143,6 +142,7 @@ export const PicOfTheDay = () => {
         media_type={media}
         explanation={explanation}
       />
+      <StyledFadeEffectBot></StyledFadeEffectBot>
     </StyledContainer>
   );
 };
