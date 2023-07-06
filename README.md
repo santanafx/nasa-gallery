@@ -1,7 +1,7 @@
 # Sobre o projeto
 
 <p align="justify">
-O projeto tinha como objetivo aprender e utilizar as bibliotecas Redux e Styled Components. Foi criada uma galeria de fotos e vídeos utilizando o pacote Swiper para gerar os slides. O pacote Redux foi utilizado para armazenar os dados da API da Nasa, enquanto o pacote Axios foi utilizado para realizar solicitações GET à API. Além disso, um hook personalizado foi implementado para deixar o projeto mais organizado e limpo. O pacote Redux-Logger foi utilizado para visualizar os dados armazenados no Redux, e o pacote React-Scroll foi utilizado para direcionar o usuário para uma parte específica da página.
+O projeto tinha como objetivo aprender e utilizar as bibliotecas Redux e Styled Components. Foi criada uma galeria de fotos e vídeos utilizando o pacote Swiper para gerar os slides. O pacote Redux foi utilizado para armazenar os dados da API da Nasa, enquanto o pacote Axios foi utilizado para realizar solicitações GET à API através da criação de um custom hook para deixar o projeto mais organizado. O pacote Redux-Logger foi utilizado para visualizar os dados armazenados no Redux, e o pacote React-Scroll foi utilizado para direcionar o usuário para uma parte específica da página.
 
 O projeto também inclui a funcionalidade de abrir um modal para uma melhor visualização de imagens e vídeos, permitindo que o usuário escolha o que deseja ver.</p>
 
